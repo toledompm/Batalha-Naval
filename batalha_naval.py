@@ -42,7 +42,8 @@ def guarda_posicoes(posicoes,idj):
                 if pos[-1] == 'H':
                     vertical = False
                 pos = pos[:-1]
-            h,v = [0,0]
+            h = 0
+            v = 0
             for i in range(tam):
                 if vertical:
                     v += i 
