@@ -100,12 +100,10 @@ def main():
     jogador2 = leia_arquivo('jogador2.txt')
 
     validate_parts(jogador1,1)  
-    validate_parts(jogador2,2)
-
     posicoes_ocupadas_j1 = guarda_posicoes(jogador1['posicoes'],1)
     validate_torpedos(jogador1['torpedos'],1)
 
-    
+    validate_parts(jogador2,2)
     posicoes_ocupadas_j2 = guarda_posicoes(jogador2['posicoes'],2)
     validate_torpedos(jogador2['torpedos'],2)
 
