@@ -110,16 +110,12 @@ def main():
     result1 = bombardeios(jogador1['torpedos'],posicoes_ocupadas_j2,1)
     result2 = bombardeios(jogador2['torpedos'],posicoes_ocupadas_j1,2)
     
-    saida_txt = ''
-    ambos = False
+    if result1['pontos'] == result2['pontos']:
+        saida("J1 {}AA {}AE {}PT".format(result1['acertos'],result1['alvos'],result1['pontos']) + '\n' + "J2 {}AA {}AE {}PT".format(result2['acertos'],result2['alvos'],result2['pontos']))
     if result1['pontos'] >= result2['pontos']:
-        saida_txt += "J1 {}AA {}AE {}PT".format(result1['acertos'],result1['alvos'],result1['pontos'])
-        ambos = True
+        saida("J1 {}AA {}AE {}PT".format(result1['acertos'],result1['alvos'],result1['pontos']))
     if result1['pontos'] <= result2['pontos']:
-        if ambos:
-            saida_txt += '\n'
-        saida_txt += "J2 {}AA {}AE {}PT".format(result2['acertos'],result2['alvos'],result2['pontos'])
-    saida(saida_txt)
+        saida("J2 {}AA {}AE {}PT".format(result2['acertos'],result2['alvos'],result2['pontos']))
     
 main()
             
